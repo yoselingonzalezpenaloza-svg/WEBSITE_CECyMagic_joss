@@ -1,595 +1,502 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CECyTEM Plantel Valle de Bravo</title>
 
-<HEAD>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WEBSITE CECyMagic</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Iconos Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+<style>
+body{
+    background:#f4f6f9;
+}
+.carousel-item img {
+    width: 600%;
+    height: 480px; /* Cambia este valor para hacerlas más grandes o pequeñas */
+    object-fit: contain; /* Muestra la imagen completa sin recortarla */
+}
 
-    <style>
-        .card-img-top {
-            height: 220px;
-            object-fit: cover;
-        }
-        .card {
-            height: 100%;
-        }
-    </style>
-    </HEAD>
 
-    <body>
-        <div class="container text-center my-5">
-        <h1>GASTRONOMÍA VALLE DE BRAVO</h1>
-        <p>Descubriendo la historia, cultura y belleza que hace único a nuestro Municipio.</p>
-            
+
+
+    
+/* NAVBAR */
+.navbar{
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+/* MARQUESINA */
+.marquesina{
+    background:#0f5132;
+    color:white;
+    overflow:hidden;
+    white-space:nowrap;
+    padding:12px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.marquesina span{
+    display:inline-block;
+    padding-left:100%;
+    animation:mover 25s linear infinite;
+}
+@keyframes mover{
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-100%);     } }
+
+/* PORTADA...................................................... */
+/* PORTADA */
+.hero {
+    background:
+        linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url("https://raw.githubusercontent.com/cecytemvalledebravo/CECyTEM-VALLE-DE-BRAVO-/main/FONDOX.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+    color: white;
+    text-align: center;
+}
+
+.hero-content {
+    transform: translateY(-120px);
+}
+/* TARJETAS */
+.card{
+transition:.3s;
+}
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 20px rgba(0,0,0,.3);
+}
+
+/* ACCESOS */
+.acceso{
+height:150px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+font-size:18px;
+}
+
+/* FOOTER */
+footer{
+background:#146c43;
+color:white;
+}
+</style>
+</head>
+   
+<body>
+<!-- MENU PRINCIPAL -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
+
+    <div class="container">
+
+        <!-- LOGO Y NOMBRE -->
+        <a class="navbar-brand fw-bold" href="#">
+            <i class="bi bi-mortarboard-fill"></i>
+            CECyTEM VALLE DE BRAVO
+        </a>
+
+        <!-- BOTON PARA CELULAR -->
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- MENU -->
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <!-- INICIO -->
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        Inicio
+                    </a>
+                </li>
+
+                <!-- SITIOS DE INTERES -->
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       role="button"
+                       data-bs-toggle="dropdown">
+
+                        Sitios de interés
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item"
+                               href="https://cecytem.edomex.gob.mx/"
+                               target="_blank">
+
+                                Página oficial CECyTEM
+
+                            </a>
+                        </li>
+
+                      
+
+                    </ul>
+
+                </li>
+
+                <!-- OFERTA EDUCATIVA -->
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle"
+                       href="#"
+                       role="button"
+                       data-bs-toggle="dropdown">
+
+                        Oferta educativa
+
+                    </a>
+
+                    <ul class="dropdown-menu">
+
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                Programación
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-        
-<a href="LUGARESVALLE.html">LUGARESVALLE</a>
+</nav>
 
-    <a href="Lugaresquepuedesvisitar.html">LUGARESQUEPUEDESVISITAR</a>    
+<!-- MARQUESINA -->
+<div class="marquesina">
+<span>
+📢 B i e n v e n i d o s 
+&nbsp;&nbsp;&nbsp;
+🌐 Nuevo portal.
+</span> </div>
+
+    <!-- PORTADA -->
+<section class="hero"> <div class="container hero-content"><h1 class="display-4 fw-bold"> CECyTEM <p>PLANTEL VALLE DE BRAVO </h1>
+   <div class="text-center">
+
+  <p class="lead"> Educación Media Superior </p>
+<a href="#" class="btn btn-warning btn-lg"> #SomosLeopardos </a> </div> </section>
+    
+<!-- CARRUSEL  IMAGENES...............................................................-->
+
+<!-- CARRUSEL IMÁGENES -->
+<div id="slider"
+     class="carousel slide container mt-4"
+     data-bs-ride="carousel">
+
+    <div class="carousel-inner rounded shadow">
+
+ <!-- IMAGEN 1 -->
        
-    <div class="container my-5">
-    <div class="row g-4">
+<div class="carousel-item active">
+    <img src="https://raw.githubusercontent.com/cecytemvalledebravo/CECyTEM-VALLE-DE-BRAVO-/main/imagen1.jpeg"
+         class="d-block w-100"
+         alt="Actividades deportivas CECyTEM">
+</div>
 
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C13.jpeg"
-        class="card-img-top"
-        alt="Imagen 1">
+<!-- IMAGEN 2 -->
+<div class="carousel-item">
+    <img src="https://raw.githubusercontent.com/cecytemvalledebravo/CECyTEM-VALLE-DE-BRAVO-/main/imagen2.jpeg"
+         class="d-block w-100"
+         alt="Actividades deportivas CECyTEM">
+</div>
 
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Salsa Roja en Molcajete </h5>
-        <p class="card-text">
-            "La gastronomia es tradicion servida en cada platillo"</p>
+<!-- IMAGEN 3 -->
+<div class="carousel-item">
+    <img src="https://raw.githubusercontent.com/cecytemvalledebravo/CECyTEM-VALLE-DE-BRAVO-/main/imagen3.jpeg"
+         class="d-block w-100"
+         alt="Actividades deportivas CECyTEM">
+</div>
 
-     
+        <!-- IMAGEN 2 -->
+<div class="carousel-item">
+    <img src="https://raw.githubusercontent.com/cecytemvalledebravo/CECyTEM-VALLE-DE-BRAVO-/main/humo1.jpeg"
+         class="d-block w-100"
+         alt="Actividades deportivas CECyTEM">
+</div>
+            <!-- IMAGEN 2 -->
+<div class="carousel-item">
+    <img src="https://raw.githubusercontent.com/cecytemvalledebravo/CECyTEM-VALLE-DE-BRAVO-/main/humo2.jpeg"
+         class="d-block w-100"
+         alt="Actividades deportivas CECyTEM">
+</div>
+    <!-- BOTÓN ANTERIOR -->
+    <button class="carousel-control-prev"
+            type="button"
+            data-bs-target="#slider"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <!-- BOTÓN SIGUIENTE -->
+    <button class="carousel-control-next"
+            type="button"
+            data-bs-target="#slider"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </button>
+
+</div>
+<!-- TARJETAS PRINCIPALES -->
+<div class="container mt-5">
+    <div class="row g-4 align-items-stretch">
+
+<!-- CULTURA DIGITAL -->
+<div class="col-12 col-md-4">
+    <div class="card shadow h-100">
+        <div class="card-body text-center d-flex flex-column">
+
+            <i class="bi bi-envelope-fill fs-1 text-success"></i>
+
+            <h3 class="mt-3">
+                Correo institucional
+            </h3>
+
+            <p class="flex-grow-1">
+               Ingresa correo y contraseña.
+            </p>
+
+            <div class="mt-auto">
+                <a href="https://mail.google.com/"
+                   class="btn btn-success"
+                   target="_blank">
+                    <i class="bi bi-box-arrow-in-right"></i>
+                    Accesar
+                </a>
+            </div>
+
+        </div>
     </div>
-    </div>     
+</div>
+
+
+        <!-- CALENDARIO ESCOLAR -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center d-flex flex-column">
+
+                    <i class="bi bi-calendar-event-fill fs-1 text-success"></i>
+
+                    <h3 class="mt-3">
+                        Calendario escolar 2026-2027
+                    </h3>
+
+                    <p class="flex-grow-1">
+                        Consulta fechas de evaluaciones parciales.
+                    </p>
+
+                    <div class="mt-auto">
+                        <a href="CALENDARIO_ESCOLAR_2026_2027.pdf"
+                           class="btn btn-success"
+                           download>
+                            <i class="bi bi-download"></i>
+                            Descargar
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- CURP -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow h-100">
+                <div class="card-body text-center d-flex flex-column">
+
+                    <i class="bi bi-person-vcard-fill fs-1 text-success"></i>
+
+                    <h3 class="mt-3">
+                        Consulta CURP
+                    </h3>
+
+                    <p class="flex-grow-1">
+                        Consulta y descarga tu CURP de manera oficial.
+                    </p>
+
+                    <div class="mt-auto">
+                        <a href="https://www.gob.mx/curp/"
+                           class="btn btn-success"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <i class="bi bi-search"></i>
+                           Consultar y descargar.
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
     </div>
+</div>
 
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C30.jpeg"
-        class="card-img-top"
-        alt="Imagen 2">
 
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Mole rojo y arroz </h5>
-        <p class="card-text">
-            "Cada platillo cuenta una historia"</p>
+
+    
+<!-- ACCESOS RAPIDOS -->
+<div class="container mt-5">
+<div class="card shadow border-0">
+<div class="card-header bg-success text-white text-center">
+<h3>
+<i class="bi bi-link-45deg"></i>
+Accesos Rápidos
+</h3>
+</div>
+<div class="card-body">
+<div class="row g-3 text-center">
+
+<!-- FACEBOOK -->
+<div class="col-md-4">
+<a href="https://www.facebook.com/share/1eDr3deJeY/"
+target="_blank"
+class="btn btn-primary acceso w-100">
+<i class="bi bi-facebook fs-1"></i>
+Facebook Oficial
+</a>
+</div>
+
+<!-- TIKTOK -->
+<div class="col-md-4">
+<a href="https://www.tiktok.com/@cecy_instantes_ig"
+target="_blank"
+class="btn btn-dark acceso w-100">
+<i class="bi bi-tiktok fs-1"></i>
+TikTok 
+</a>
+</div>
+
+<!-- CONTROL ESCOLAR -->
+<div class="col-md-4">
+<a href="https://cecytem.mx/deo/gui/LogIn.jsp"
+target="_blank"
+class="btn btn-success acceso w-100">
+<i class="bi bi-person-vcard-fill fs-1"></i>
+Control Escolar
+<br>
+Consulta tu Boleta
+</a>
+</div> </div> </div> </div> </div>
+
+<!-- SECCION DE INFORMACION -->
+<!-- SECCION DE INFORMACION -->
+<div class="container mt-5">
+    <div class="row">
+
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+
+                    <h3 class="text-success">
+                        <i class="bi bi-megaphone-fill"></i>
+                        Vinculación del Plantel.
+                    </h3>
+
+                    <p>
+                        Programas, actividades, becas, etc.
+                    </p>
+
+                    <ul>
+                         
+                        <li>Actividades cívicas</li>
+                         <li>Actividades deportivas</li>
+                         <li>Actividades culturales</li>
+                         <li>Actividades de creatividad</li>
+                         <li>Eventos</li>
+                         <li>Convenios</li>
+                          <li>Convocatorias.</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body text-center">
+
+                    <h3 class="text-success">
+                        <i class="bi bi-people-fill"></i>
+                       
+      <p> Ubicación y contacto <p> 
+
+                    </h3>
+
+                    <p>
+                         Dirección: Calle Jerónimo Frutis de Nova S/N. Cuadrilla de Dolores, Valle de Bravo, C.P. 51225</p>
+                        <p>Teléfono: 726 251 42 61</p>
+                    </p>
+
+                    <button id="btnSeguir" class="btn btn-outline-success">
+                        <i class="bi bi-person-plus-fill"></i>
+                        <!--  -->
+                        <!-- Seguir página 
+                    </button>
+
+                    <div class="mt-3">
+                        <h4 class="fw-bold text-success mb-0">
+                            <span id="seguidores">0</span>
+                        </h4>
+
+                        <small class="text-muted">
+                         <!--    seguidores -->
+                        </small>
+                    </div>
+
+                </div>
+            </div>
+        </div>
 
     </div>
-    </div>     
-    </div>
+</div>
 
+</script>
+<!-- FOOTER ..................................................-->
+<footer class="mt-5">
+<div class="container text-center py-4">
+<h5>
+CECyTEM Plantel Valle de Bravo
+</h5> <p>
+<!--Mtra•Irma•GM-->
+</p>
 
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C5.jpeg"
-        class="card-img-top"
-        alt="Imagen 3">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Pozole rojo </h5>
-        <p class="card-text">
-            "La gastronomia es creatividad convertida en sabor"</p>
-        </div>
-        </div>
-        </div>     
-
-
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C6.jpeg"
-        class="card-img-top"
-        alt="Imagen 4">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Caldo de camarón</h5>
-        <p class="card-text">
-            "El buen sabor nunca pasa de moda"</p>
-        </div>
-        </div>
-        </div>   
-      
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C1.jpeg"
-        class="card-img-top"
-        alt="Imagen 5">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Pozole</h5>
-        <p class="card-text">
-            "Del corazón a la mesa"</p>
-        </div>
-        </div>
-        </div>   
-
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C16.jpeg"
-        class="card-img-top"
-        alt="Imagen 6">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Tamal con mole</h5>
-        <p class="card-text">
-            "El placer comienza con un buen sabor"</p>
-        </div>
-        </div>
-        </div>   
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C7.jpeg"
-        class="card-img-top"
-        alt="Imagen 7">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Pechuga de pollo</h5>
-        <p class="card-text">
-            "La pasión se sirve en cada plato"</p>
-        </div>
-        </div>
-        </div>   
-
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C10.jpeg"
-        class="card-img-top"
-        alt="Imagen 8">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Arroz blanco, frijoles y albondigas</h5>
-        <p class="card-text">
-            "Tradición servida con pasión"</p>
-        </div>
-        </div>
-        </div> 
+    <div>
+<a href="https://www.facebook.com/share/1eDr3deJeY/"
+target="_blank"
+class="text-white fs-3 mx-2">
+<i class="bi bi-facebook"></i>
+</a>
         
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C8.jpeg"
-        class="card-img-top"
-        alt="Imagen 9">
+    <a href="https://www.tiktok.com/@cecy_instantes_ig"
+target="_blank"
+class="text-white fs-3 mx-2">
+<i class="bi bi-tiktok"></i>
+</a>
+</div>
+<p class="mt-3">
+© 2026 - 2027 Mtra.Irma González Murillo
+</p> </div>
+</footer>
 
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Salsa verde en molcajete</h5>
-        <p class="card-text">
-            "Hecha para darle vida a tus platillos"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C17.jpeg"
-        class="card-img-top"
-        alt="Imagen 10">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Frijoles</h5>
-        <p class="card-text">
-            "Donde nace el sabor, nace el arte"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C20.jpeg"
-        class="card-img-top"
-        alt="Imagen 11">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Pozole de pollo</h5>
-        <p class="card-text">
-            "El sazón es la esencia de una cultura"</p>
-        </div>
-        </div>
-        </div>  
-
-       <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C9.jpeg"
-        class="card-img-top"
-        alt="Imagen 12">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-          Caldon de res</h5>
-        <p class="card-text">
-            "Del ingrediente nace la creación"</p>
-        </div>
-        </div>
-        </div>  
-
-    <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C27.jpeg"
-        class="card-img-top"
-        alt="Imagen 13">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Mole verde</h5>
-        <p class="card-text">
-            "El sabor tambien es identidad"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C29.jpeg"
-        class="card-img-top"
-        alt="Imagen 14">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Tacos de longaniza</h5>
-        <p class="card-text">
-            "Sabores que despiertan emociones"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C25.jpeg"
-        class="card-img-top"
-        alt="Imagen 15">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-          Bistec</h5>
-        <p class="card-text">
-            "Un platillo mil emociones"</p>
-        </div>
-        </div>
-        </div>  
-
-       <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C14.jpeg"
-        class="card-img-top"
-        alt="Imagen 16">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Arroz blanco con mole rojo</h5>
-        <p class="card-text">
-            "Los mejores recuerdos tambbien tienen sabor"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C22.jpeg"
-        class="card-img-top"
-        alt="Imagen 17">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Pozole de puerco</h5>
-        <p class="card-text">
-            "La gastronomia es hacer de un ingrediente una experiencia"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C23.jpeg"
-        class="card-img-top"
-        alt="Imagen 18">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Chiles rellenos</h5>
-        <p class="card-text">
-            "Un buen platillo comienza con pasión"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-    <div class="card h-100 shadow">
-        <img src="C.37.jpeg"
-        class="card-img-top"
-        alt="Imagen 19">
-
-        <div class="card-body text-center">
-        <h5 class="card-title">
-         Pozole</h5>
-        <p class="card-text">
-            "Entre ingredientes nace la magia"</p>
-        </div>
-        </div>
-        </div>  
-
-        <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C.36.jpeg"
-                class="card-img-top"
-                alt="Imagen 20">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Enchiladas verdes</h5>
-                        <p class="card-text">
-                           "Un plato, infinitas sensaciones"</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C7.jpeg"
-                class="card-img-top"
-                alt="Imagen 21">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Pechuga empanizada con frijoles refritos</h5>
-                        <p class="card-text">
-                           "Tradición servida con pasión"</p>
-                </div>
-            </div>
-        </div>
-
-         <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C33.jpeg"
-                class="card-img-top"
-                alt="Imagen 22">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Filete de pescado, Spaghetti verde</h5>
-                        <p class="card-text">
-                           "Momentos que saben a felicidad"</p>
-                </div>
-            </div>
-        </div>
-
-         <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C.39.jpeg"
-                class="card-img-top"
-                alt="Imagen 23">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Pozole verde</h5>
-                        <p class="card-text">
-                           "Cocina con pasión, sirve con amor</p>
-                </div>
-            </div>
-        </div>
-        
-                
-                <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C12.jpeg"
-                class="card-img-top"
-                alt="Imagen 24">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Espagueti con salsa blanca y champiñones</h5>
-                        <p class="card-text">
-                           "Donde hay sabor, hay recuerdos"</p>
-                </div>
-            </div>
-        </div>
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C2.jpeg"
-                class="card-img-top"
-                alt="Imagen 25">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Costilla de Puerco, arroz, frijoles</h5>
-                        <p class="card-text">
-                           "La gastronomía es amor en cada plato"</p>
-                </div>
-            </div>
-        </div>
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C11.jpeg"
-                class="card-img-top"
-                alt="Imagen 26">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Enchiladas-frijoles</h5>
-                        <p class="card-text">
-                           "El placer está en cada bocado"</p>
-                </div>
-            </div>
-        </div>
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C.40.jpeg"
-                class="card-img-top"
-                alt="Imagen 27">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Sopes de tinga</h5>
-                        <p class="card-text">
-                           "Cada sabor, una historia por descubrir"</p>
-                </div>
-            </div>
-        </div>
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C34.jpeg"
-                class="card-img-top"
-                alt="Imagen 28">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Birria</h5>
-                        <p class="card-text">
-                           "Un mundo de sabores por descubrir"</p>
-                </div>
-            </div>
-        </div>
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C24.jpeg"
-                class="card-img-top"
-                alt="Imagen 29">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Bistec, frijoles con longaniza</h5>
-                        <p class="card-text">
-                           "Cada receta es parte de nuestra historia"</p>
-                </div>
-            </div>
-        </div>
-
-         <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C4.jpeg"
-                class="card-img-top"
-                alt="Imagen 30">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Huevo revuelto, atun y tuetano</h5>
-                        <p class="card-text">
-                           "Sabores que nos hacen recordar"</p>
-                </div>
-            </div>
-        </div>
-
-         <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C.38.jpeg"
-                class="card-img-top"
-                alt="Imagen 31">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Cecina, ensalada, frijoles refritos</h5>
-                        <p class="card-text">
-                           "Sabores que dejan huella"</p>
-                </div>
-            </div>
-        </div>
-
-         <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C2.jpeg"
-                class="card-img-top"
-                alt="Imagen 32">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Arroz rojo, frijoles, carne de puerco</h5>
-                        <p class="card-text">
-                           "El arte de crear momentos con sabor"</p>
-                </div>
-            </div>
-        </div>
-
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="C32.jpeg"
-                class="card-img-top"
-                alt="Imagen 33">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Tacos de suadero</h5>
-                        <p class="card-text">
-                           "Donde hay sabor, hay felicidad"</p>
-                </div>
-            </div>
-        </div>
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="GAST_1.jpeg"
-                class="card-img-top"
-                alt="Imagen 34">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Torta ahogada</h5>
-                        <p class="card-text">
-                           "El sabor es una forma de arte"</p>
-                </div>
-            </div>
-        </div>
-
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="GAST_2.jpeg"
-                class="card-img-top"
-                alt="Imagen 35">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                       Birria</h5>
-                        <p class="card-text">
-                           "Un buen día comienza con un buen sabor</p>
-                </div>
-            </div>
-        </div>
-
-
-                 <div class="col-md-4">
-            <div class="card h-100 shadow">
-                <img src="GAST_3.jpeg"
-                class="card-img-top"
-                alt="Imagen 36">
-
-                <div class="card-body text-center">
-                    <h5 class="card-title">
-                        Salsa en molcajete</h5>
-                        <p class="card-text">
-                           "Tradciones que viven en cada bocado"</p>
-                </div>
-            </div>
-        </div>
-<a href="Lugaresquepuedesvisitar.html">LUGARESQUEPUEDESVISITAR</a>  
-         <a href="VIDEOSTIKTOK.html">LUGARESTURISTICOS</a>
-        <a href="parroquia.html">PARROQUIASANFRANCISCODEASÍS</a>
-        <a href="kioskovalle.html">KIOSKO/CENTRO</a>
-        <a href="mercadoMH.html">MERCADOMH</a>
-        <a href="rutasecoturisticas.html">RUTASECOTURISTICAS</a>
-        <a href="PINAL.html">PINAL/LAGUNANEGRA</a>
-        <a href="Museo.html">MUSEODEARTEPOPULAR</a>
-        <a href="museoartep">MUSEOARTE</a>
-        <a href="mercadodeartesanias.html">MERCADOARTESASANIAS</a>
-        <a href="mercadoa.html">MERCADODEA</a>
-    </body>
-    </html>
+<!-- Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body> </html>
